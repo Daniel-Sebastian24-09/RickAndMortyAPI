@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private var persons: [Person]  = [ .init(name: "gdag", image: "fadsf", status: "afds", species: "fdasfa", type: "afsf", location: "fadfa")]
+    private var persons: [Person]  = [ .init(name: "gdag", image: "fadsf", status: "afds", species: "fdasfa", type: "afsf", location: .init(name: "adad", url: "dadadad"))]
     
     //1
     private let titleLabel: UILabel = {
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     }
     
     private func fetchRemotePersons() {
-        let url = URL(string: "https://rickandmortyapi.com/api/character/1")!
+        let url = URL(string: "https://rickandmortyapi.com/api/character")!
         
         let request = URLRequest(url: url)
         
