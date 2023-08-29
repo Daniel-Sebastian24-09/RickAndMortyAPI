@@ -5,7 +5,10 @@ class PersonCell: UITableViewCell {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
-        stack.spacing = 16
+        stack.spacing = 5
+        stack.backgroundColor = .init(displayP3Red: 0.213, green: 0.207, blue: 0.192, alpha: 0.4)
+        stack.layer.cornerRadius = 10
+        stack.layer.masksToBounds = true
         return stack
     }()
     
@@ -14,7 +17,14 @@ class PersonCell: UITableViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.layer.cornerRadius = 18
         imageView.layer.masksToBounds = true
-        imageView.backgroundColor = .blue
+        return imageView
+    }()
+    
+    private let portalFundo: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.layer.cornerRadius = 18
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
@@ -26,19 +36,32 @@ class PersonCell: UITableViewCell {
         return stack
     }()
     
+    private let verticalInfo: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.spacing = 8
+        stack.distribution = .equalCentering
+        stack.backgroundColor = .brown
+        stack.layer.cornerRadius = 10
+        stack.layer.masksToBounds = true
+        return stack
+    }()
+    
     private let nomeLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
+        label.textColor = .white
         label.numberOfLines = 0
+        label.textAlignment = .center
         return label
     }()
     
     private let status: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = .darkGray
+        label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        label.textColor = .white
         label.numberOfLines = 0
+        label.textAlignment = .center
         return label
     }()
     
@@ -58,7 +81,8 @@ class PersonCell: UITableViewCell {
     public func setup(persons: Person) {
         nomeLabel.text = persons.name
         status.text = "status: \(persons.status)"
-        //PersonImageView.download(from: persons.imgUrl)
+        PersonImageView.download(from: persons.image)
+        portalFundo.download(from: "https://i.pinimg.com/originals/98/29/21/9829215db6f9210c0ae4e318e854cb1f.png")
     }
     
     private func setupView() {
@@ -67,12 +91,15 @@ class PersonCell: UITableViewCell {
     
     private func addViewsInHierarchy() {
         contentView.addSubview(horizontalStack)
-        horizontalStack.addArrangedSubview(PersonImageView)
+        horizontalStack.addArrangedSubview(portalFundo)
+        portalFundo.addSubview(PersonImageView)
         horizontalStack.addArrangedSubview(verticalStack)
+        horizontalStack.addArrangedSubview(UIView())
         verticalStack.addArrangedSubview(UIView())
-        verticalStack.addArrangedSubview(nomeLabel)
-        verticalStack.addArrangedSubview(status)
+        verticalStack.addArrangedSubview(verticalInfo)
         verticalStack.addArrangedSubview(UIView())
+        verticalInfo.addArrangedSubview(nomeLabel)
+        verticalInfo.addArrangedSubview(status)
     }
     
     private func setupConstraints() {
@@ -84,8 +111,13 @@ class PersonCell: UITableViewCell {
         ])
         
         NSLayoutConstraint.activate([
-            PersonImageView.widthAnchor.constraint(equalToConstant: 90),
-            PersonImageView.heightAnchor.constraint(equalToConstant: 120)
+            portalFundo.widthAnchor.constraint(equalToConstant: 150),
+            portalFundo.heightAnchor.constraint(equalToConstant: 150),
+            PersonImageView.widthAnchor.constraint(equalToConstant: 100),
+            PersonImageView.heightAnchor.constraint(equalToConstant: 100),
+            PersonImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 55),
+            PersonImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 55),
+            verticalInfo.widthAnchor.constraint(equalToConstant: 140),
         ])
     }
 }

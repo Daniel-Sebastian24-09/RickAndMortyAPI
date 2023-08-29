@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private var persons: [Person]  = [ .init(name: "gdag", image: "fadsf", status: "afds", species: "fdasfa", type: "afsf", location: "fadfa")]
+    private var persons: [Person]  = []
     
     //1
     private let titleLabel: UILabel = {
@@ -12,7 +12,7 @@ class ViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
         label.textColor = .black
         label.numberOfLines = 0
-        label.text = "Personagens"
+        label.text = "Rick and Morty - Character"
         return label
         
     }()
@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     }
     
     private func fetchRemotePersons() {
-        let url = URL(string: "https://rickandmortyapi.com/api/character/1")!
+        let url = URL(string: "https://rickandmortyapi.com/api/character/?page=\(Int.random(in: 1...42))")!
         
         let request = URLRequest(url: url)
         
@@ -87,8 +87,6 @@ class ViewController: UIViewController {
             }
         }.resume()
         
-        print(persons)
-            
     }
 
 }

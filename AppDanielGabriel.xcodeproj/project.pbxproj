@@ -17,6 +17,7 @@
 		CE3A22C62A859E7F00ACADB0 /* detalhes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3A22C52A859E7F00ACADB0 /* detalhes.storyboard */; };
 		CE3A22CB2A86F48B00ACADB0 /* DetalheViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A22CA2A86F48B00ACADB0 /* DetalheViewControler.swift */; };
 		CE3A22D02A8EF04300ACADB0 /* TMDBRemotePerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A22CF2A8EF04300ACADB0 /* TMDBRemotePerson.swift */; };
+		CE3A22D32A9818ED00ACADB0 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A22D22A9818ED00ACADB0 /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CE3A22C52A859E7F00ACADB0 /* detalhes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = detalhes.storyboard; sourceTree = "<group>"; };
 		CE3A22CA2A86F48B00ACADB0 /* DetalheViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheViewControler.swift; sourceTree = "<group>"; };
 		CE3A22CF2A8EF04300ACADB0 /* TMDBRemotePerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBRemotePerson.swift; sourceTree = "<group>"; };
+		CE3A22D22A9818ED00ACADB0 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		CE3A22AC2A60CA4800ACADB0 /* AppDanielGabriel */ = {
 			isa = PBXGroup;
 			children = (
+				CE3A22D12A9818BD00ACADB0 /* Extensões */,
 				CE3A22CC2A8EEFA300ACADB0 /* Models */,
 				CE3A22C72A86F3CB00ACADB0 /* Detalhe */,
 				CE3A22C92A86F42100ACADB0 /* Lista - */,
@@ -101,6 +104,15 @@
 				CE3A22CF2A8EF04300ACADB0 /* TMDBRemotePerson.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE3A22D12A9818BD00ACADB0 /* Extensões */ = {
+			isa = PBXGroup;
+			children = (
+				CE3A22D22A9818ED00ACADB0 /* UIImageView.swift */,
+			);
+			name = "Extensões";
+			path = "Extensões";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3A22D32A9818ED00ACADB0 /* UIImageView.swift in Sources */,
 				CE3A22C42A85978400ACADB0 /* Person.swift in Sources */,
 				CE3A22B22A60CA4800ACADB0 /* ViewController.swift in Sources */,
 				CE3A22AE2A60CA4800ACADB0 /* AppDelegate.swift in Sources */,

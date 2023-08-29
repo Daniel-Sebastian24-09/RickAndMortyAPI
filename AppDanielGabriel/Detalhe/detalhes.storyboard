@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,53 +12,65 @@
             <objects>
                 <viewController storyboardIdentifier="detalhes" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DetalheViewControler" customModule="AppDanielGabriel" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portal" translatesAutoresizingMaskIntoConstraints="NO" id="jJW-pg-BVd">
-                                <rect key="frame" x="57" y="141" width="300" height="300"/>
+                                <rect key="frame" x="37.666666666666657" y="142.66666666666663" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="A9z-59-8Oa"/>
                                     <constraint firstAttribute="width" constant="300" id="zTH-wo-7Hy"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4UO-pe-n68">
-                                <rect key="frame" x="117" y="201" width="180" height="180"/>
+                                <rect key="frame" x="97.666666666666686" y="202.66666666666663" width="180" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="HG4-WW-PQI"/>
                                     <constraint firstAttribute="height" constant="180" id="MwC-p1-g5b"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="5Qm-az-K2W">
-                                <rect key="frame" x="117" y="473" width="180" height="183"/>
+                                <rect key="frame" x="37.666666666666657" y="474.66666666666674" width="300" height="182"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Características " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TU-zF-TZQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Characteristics " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TU-zF-TZQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="28.666666666666668"/>
                                         <color key="backgroundColor" red="0.45882352941176469" green="0.41176470588235292" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status - Morto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bS7-Kn-Vtl">
-                                        <rect key="frame" x="0.0" y="41" width="180" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="40.666666666666686" width="300" height="26.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="LbM-th-5A2"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Espécie - Alien" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ar-eP-uwC">
-                                        <rect key="frame" x="0.0" y="79.5" width="180" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="78.999999999999943" width="300" height="26.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="GuR-dA-T0x"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo - Parasita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxj-Hg-SGB">
-                                        <rect key="frame" x="0.0" y="118" width="180" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="117.3333333333333" width="300" height="26.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="afr-tb-FvB"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Localização - Terra" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmC-jA-kPk">
-                                        <rect key="frame" x="0.0" y="156.5" width="180" height="26.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Localização - Terra" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmC-jA-kPk">
+                                        <rect key="frame" x="0.0" y="155.66666666666669" width="300" height="26.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="vnp-WX-LcV"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -67,7 +79,7 @@
                                 <color key="backgroundColor" red="0.83529411764705885" green="0.81176470588235294" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOME" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPs-zQ-qcV">
-                                <rect key="frame" x="32" y="80" width="350" height="29"/>
+                                <rect key="frame" x="32" y="82" width="311" height="28.666666666666671"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -88,8 +100,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="personEspecie" destination="3Ar-eP-uwC" id="thl-y4-X9Z"/>
                         <outlet property="personImg" destination="4UO-pe-n68" id="Y93-db-UzJ"/>
+                        <outlet property="personLocate" destination="nmC-jA-kPk" id="BiH-3n-wQ0"/>
                         <outlet property="personName" destination="mPs-zQ-qcV" id="9Nk-it-XW9"/>
+                        <outlet property="personStatus" destination="bS7-Kn-Vtl" id="3ZT-6u-R6h"/>
+                        <outlet property="personTipo" destination="Jxj-Hg-SGB" id="5f7-tp-JZd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
