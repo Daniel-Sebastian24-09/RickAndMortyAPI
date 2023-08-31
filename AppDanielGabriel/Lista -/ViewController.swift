@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
         table.separatorStyle = .none
+        table.backgroundColor = UIColor(red: 230/255, green: 224/255, blue: 206/255, alpha: 1)
         return table
         
     }()

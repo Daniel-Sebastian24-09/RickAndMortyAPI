@@ -6,7 +6,7 @@ class PersonCell: UITableViewCell {
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
         stack.spacing = 5
-        stack.backgroundColor = .init(displayP3Red: 0.213, green: 0.207, blue: 0.192, alpha: 0.4)
+        stack.backgroundColor = UIColor(displayP3Red: 213/255, green: 207/255, blue: 192/255, alpha: 1)
         stack.layer.cornerRadius = 10
         stack.layer.masksToBounds = true
         return stack
@@ -41,7 +41,7 @@ class PersonCell: UITableViewCell {
         stack.axis = .vertical
         stack.spacing = 8
         stack.distribution = .equalCentering
-        stack.backgroundColor = .brown
+        stack.backgroundColor = .init(displayP3Red: 117/255, green: 105/255, blue: 81/255, alpha: 1)
         stack.layer.cornerRadius = 10
         stack.layer.masksToBounds = true
         return stack
@@ -113,10 +113,12 @@ class PersonCell: UITableViewCell {
         NSLayoutConstraint.activate([
             portalFundo.widthAnchor.constraint(equalToConstant: 150),
             portalFundo.heightAnchor.constraint(equalToConstant: 150),
+            
             PersonImageView.widthAnchor.constraint(equalToConstant: 100),
             PersonImageView.heightAnchor.constraint(equalToConstant: 100),
             PersonImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 55),
             PersonImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 55),
+            
             verticalInfo.widthAnchor.constraint(equalToConstant: 140),
         ])
     }
